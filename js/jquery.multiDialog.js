@@ -525,7 +525,7 @@ $.extend( MultiDialog.prototype, {
 		}
 	},
 
-	index: function( index ) {
+	goto: function( index ) {
 		this._move( index );
 	},
 
