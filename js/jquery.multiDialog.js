@@ -822,9 +822,8 @@ $.extend( MultiDialog.prototype, {
 	},
 
 	_getPositionInfo: function( key ) {
-		if ( ! this.group ) return;
-		if ( this.options.gallery.enabled && this.group.length > 0 && this.options.gallery.showPositionInfo[ key ] && !this.isLoading ) {
-			return "<span class='position'>" + this.options.gallery.strings.position.replace( "{index}", this.index + 1 ).replace( "{amount}", this.group.length ) + "</span>";
+		if ( this.options.gallery.enabled && this.group && this.group.length > 0 && this.options.gallery.showPositionInfo[ key ] && !this.isLoading ) {
+			return "<span class='positon'>" + this.options.gallery.strings.position.replace( "{index}", this.index + 1 ).replace( "{amount}", this.group.length ) + "</span>";
 		}
 
 		return "";
